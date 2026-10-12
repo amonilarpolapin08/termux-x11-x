@@ -569,7 +569,7 @@ public boolean onGenericMotionEvent(MotionEvent event) {
         // in what is left visible, and only what still does not fit there is left to be scrolled.
         int visibleH = Math.max(0, availableH - obscuredBottom);
         int left = availableLeft + (availableW - drawW) / 2;
-        int top = availableTop + Math.max(0, (visibleH - drawH) / 2);
+        int top = availableTop;
 
         viewport.set(left, top, left + drawW, top + drawH);
         int hiddenBottom = Math.max(0, viewport.bottom - (availableTop + visibleH));
